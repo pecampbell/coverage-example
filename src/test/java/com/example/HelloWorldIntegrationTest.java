@@ -61,7 +61,7 @@ public class HelloWorldIntegrationTest {
 	
 	@Test
 	public void testHelloWorld() throws InterruptedException {
-		Thread.sleep(150000L);
+		//Thread.sleep(150000L);
 		// Start from the homepage
 		driver.get("http://localhost:8080/helloworld/");
 		HomePage homePage = new HomePage(driver);
