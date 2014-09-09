@@ -89,22 +89,22 @@
 
 
 
-    <profile>
+<profile>
       <id>jprofiler</id>
 
       <activation>
         <!-- Path to JProfiler installation -->
         <property>
           <name>jprofiler.home</name>
-          <value>/Applications/jprofiler8/bin/macos/libjprofilerti.jnilib=offline,id=104,config=/Users/pcampbell/.jprofiler8/config.xml</value>
+          <value>/Applications/jprofiler8/bin</value>
         </property>
       </activation>
 
       <properties>
         <!-- VM parameter that loads native profiling agent for Java 1.5+ and activate offline profiling mode -->
-        <jprofiler.agentpath>-agentpath:${jprofiler.home}</jprofiler.agentpath>
+        <jprofiler.agentlib>-agentlib:${jprofiler.home}/macos/libjprofilerti.jnilib=offline,id=104,config=/Users/pcampbell/.jprofiler8/config.xml</jprofiler.agentlib>
 
-        <jprofiler.bootclasspath>-Xbootclasspath/a:${jprofiler.home}/bin/agent.jar</jprofiler.bootclasspath>
+        <jprofiler.bootclasspath>-Xbootclasspath/a:${jprofiler.home}/agent.jar</jprofiler.bootclasspath>
       </properties>
 
       <build>
@@ -113,13 +113,12 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
-              <argLine>${jprofiler.agentpath}</argLine>
+              <argLine>${jprofiler.agentlib} ${jprofiler.bootclasspath}</argLine>
             </configuration>
           </plugin>
         </plugins>
       </build>
     </profile>
-
 
 
 
