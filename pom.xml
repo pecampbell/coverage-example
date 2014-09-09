@@ -104,7 +104,7 @@
         <!-- VM parameter that loads native profiling agent for Java 1.5+ and activate offline profiling mode -->
         <jprofiler.agentlib>-agentlib:jprofilerti=offline,id=104,config=/Users/pcampbell/.jprofiler8/config.xml</jprofiler.agentlib>
 
-        <jprofiler.bootclasspath>-Xbootclasspath/a:${jprofiler.home}/agent.jar</jprofiler.bootclasspath>
+        <jprofiler.bootclasspath>-Xbootclasspath/a:${jprofiler.home}/agent.jar:${jprofiler.home}/macos</jprofiler.bootclasspath>
       </properties>
 
       <build>
