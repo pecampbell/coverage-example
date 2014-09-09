@@ -37,7 +37,7 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/conf/applicationContext.xml"})
 public class HelloWorldIntegrationTest {
 	
-	//The webdriver
+	// The webdriver
 	private static WebDriver driver;
 
 	@BeforeClass
@@ -60,13 +60,13 @@ public class HelloWorldIntegrationTest {
 	}
 	
 	@Test
-	public void testHelloWorld() throws InterruptedException {
-		//Thread.sleep(150000L);
+	public void testHelloWorld() {
 		// Start from the homepage
 		driver.get("http://localhost:9080/helloworld/");
 		HomePage homePage = new HomePage(driver);
 		
 		HelloWorldPage helloWorldPage = homePage.clickMessageLink();
+		
 		assertEquals("Hello world",helloWorldPage.getMessage());
 	}
 	
