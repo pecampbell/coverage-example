@@ -37,7 +37,7 @@ import org.springframework.test.context.support.DependencyInjectionTestExecution
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/conf/applicationContext.xml"})
 public class HelloWorldIntegrationTest {
 	
-	// The webdriver
+	//The webdriver
 	private static WebDriver driver;
 
 	@BeforeClass
