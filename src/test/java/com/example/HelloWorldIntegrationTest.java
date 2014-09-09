@@ -63,7 +63,7 @@ public class HelloWorldIntegrationTest {
 	public void testHelloWorld() throws InterruptedException {
 		//Thread.sleep(150000L);
 		// Start from the homepage
-		driver.get("http://localhost:8080/helloworld/");
+		driver.get("http://localhost:9080/helloworld/");
 		HomePage homePage = new HomePage(driver);
 		
 		HelloWorldPage helloWorldPage = homePage.clickMessageLink();
