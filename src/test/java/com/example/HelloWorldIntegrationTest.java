@@ -24,12 +24,15 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestExecutionListeners;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import org.springframework.test.context.support.DependencyInjectionTestExecutionListener;
 
 /**
  * @author GreenD
  *
  */
+@TestExecutionListeners( { DependencyInjectionTestExecutionListener.class })
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"file:src/main/webapp/WEB-INF/conf/applicationContext.xml"})
 public class HelloWorldIntegrationTest {
@@ -45,8 +48,10 @@ public class HelloWorldIntegrationTest {
 	@AfterClass
 	public static void stopSeleniumClent() {
 		try {
-			driver.close();
-			driver.quit();
+			if(driver != null){
+				driver.close();
+				driver.quit();				
+			}
 		} catch( Throwable t ) {
 			// Catch error & log, not critical for tests
 			System.err.println("Error stopping driver: "+t.getMessage());
@@ -55,13 +60,13 @@ public class HelloWorldIntegrationTest {
 	}
 	
 	@Test
-	public void testHelloWorld() {
+	public void testHelloWorld() throws InterruptedException {
+		Thread.sleep(150000L);
 		// Start from the homepage
-		driver.get("http://localhost:9080/helloworld/");
+		driver.get("http://localhost:8080/helloworld/");
 		HomePage homePage = new HomePage(driver);
 		
 		HelloWorldPage helloWorldPage = homePage.clickMessageLink();
-		
 		assertEquals("Hello world",helloWorldPage.getMessage());
 	}
 	

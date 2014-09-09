@@ -1,4 +1,4 @@
-/**
+/*
    Copyright 2010 David Green
 
    Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,6 +13,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
+
 package com.example;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,6 +22,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.ParameterizableViewController;
+
+import com.example.MessageFactory;
 
 /**
  * @author GreenD
