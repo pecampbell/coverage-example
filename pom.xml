@@ -41,10 +41,10 @@
 				<inherited>true</inherited>
         		<configuration>
           			<forkMode>once</forkMode>
-<!-- 					<excludes> -->
-<!-- 						<exclude>**/*IntegrationTest.java</exclude> -->
-<!-- 						<exclude>**/common/*</exclude> -->
-<!-- 					</excludes> -->
+					<excludes>
+						<exclude>**/*IntegrationTest.java</exclude>
+						<exclude>**/common/*</exclude>
+					</excludes>
             	</configuration>
 			</plugin>
 				
