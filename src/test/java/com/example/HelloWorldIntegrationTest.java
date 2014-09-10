@@ -68,6 +68,10 @@ public class HelloWorldIntegrationTest {
 		HelloWorldPage helloWorldPage = homePage.clickMessageLink();
 		
 		assertEquals("Hello world",helloWorldPage.getMessage());
+		try{
+			Thread.sleep(1000);
+		}
+		catch(Exception ex){}
 	}
 	
 }
