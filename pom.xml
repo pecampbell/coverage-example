@@ -187,6 +187,7 @@
 									<includes>
 										<include>**/*IntegrationTest.java</include>
 									</includes>
+									<argLine>-agentpath:/Applications/jprofiler8/bin/macos/libjprofilerti.jnilib=offline,id=104,config=/Users/pcampbell/.jprofiler8/config.xml</argLine>
 								</configuration>
 							</execution>
 						</executions>
