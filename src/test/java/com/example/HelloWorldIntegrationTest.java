@@ -65,11 +65,10 @@ public class HelloWorldIntegrationTest {
 		driver.get("http://localhost:9080/helloworld/");
 		HomePage homePage = new HomePage(driver);
 		
-		HelloWorldPage helloWorldPage = homePage.clickMessageLink();
-		
-		assertEquals("Hello world",helloWorldPage.getMessage());
-		long l = 0;
-		for(int i=0; i < 1000000000; i++) l+=i;
+		for(int i=0; i < 1000; i++){
+			HelloWorldPage helloWorldPage = homePage.clickMessageLink();
+			assertEquals("Hello world",helloWorldPage.getMessage());
+		}
 	}
 	
 }
