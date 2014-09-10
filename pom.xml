@@ -114,6 +114,9 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <configuration>
               <argLine>${jprofiler.agentlib} ${jprofiler.bootclasspath}</argLine>
+              <additionalClasspathElements>
+              	<additionalClasspathElement>${jprofiler.home}/macos</additionalClasspathElement>
+              </additionalClasspathElements>
             </configuration>
           </plugin>
         </plugins>
