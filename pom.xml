@@ -147,7 +147,7 @@
 										<include>**/*IntegrationTest.java</include>
 									</includes>
 <!-- 									<argLine>-agentpath:/Applications/jprofiler8/bin/macos/libjprofilerti.jnilib=offline,id=104,config=/Users/pcampbell/.jprofiler8/config.xml</argLine> -->
-									<argLine>-Dbtrace.agent=PaulAgent -javaagent:/Users/pcampbell/Documents/Development/Instrumentation/VMs/starter-stacks/java/TestApp/btrace-agent.jar=script=/Users/pcampbell/Documents/Development/Instrumentation/VMs/starter-stacks/java/TestApp/options.class</argLine>
+<!-- 									<argLine>-Dbtrace.agent=PaulAgent -javaagent:/Users/pcampbell/Documents/Development/Instrumentation/VMs/starter-stacks/java/TestApp/btrace-agent.jar=script=/Users/pcampbell/Documents/Development/Instrumentation/VMs/starter-stacks/java/TestApp/options.class</argLine> -->
 								</configuration>
 							</execution>
 						</executions>
