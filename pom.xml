@@ -85,47 +85,6 @@
 			</build>
 		</profile>
 
-
-
-
-
-<profile>
-      <id>jprofiler</id>
-
-      <activation>
-        <!-- Path to JProfiler installation -->
-        <property>
-          <name>jprofiler.home</name>
-          <value>/Applications/jprofiler8/bin</value>
-        </property>
-      </activation>
-
-      <properties>
-        <!-- VM parameter that loads native profiling agent for Java 1.5+ and activate offline profiling mode -->
-        <jprofiler.agentlib>-agentlib:jprofilerti=offline,id=104,config=/Users/pcampbell/.jprofiler8/config.xml</jprofiler.agentlib>
-
-        <jprofiler.bootclasspath>-Xbootclasspath/a:${jprofiler.home}/agent.jar:${jprofiler.home}/macos</jprofiler.bootclasspath>
-      </properties>
-
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <configuration>
-              <argLine>${jprofiler.agentlib} ${jprofiler.bootclasspath}</argLine>
-              <additionalClasspathElements>
-              	<additionalClasspathElement>${jprofiler.home}/macos</additionalClasspathElement>
-              </additionalClasspathElements>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-
-
-
-
 		<!--
 			Use -Pwith-integration-tests to have a jetty server startup before the integration tests run 
 		-->
