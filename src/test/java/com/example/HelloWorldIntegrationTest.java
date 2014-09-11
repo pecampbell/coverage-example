@@ -66,7 +66,7 @@ public class HelloWorldIntegrationTest {
 		HomePage homePage = new HomePage(driver);
 		HelloWorldPage helloWorldPage = homePage.clickMessageLink();
 		
-		for(int i=0; i < 100; i++){
+		for(int i=0; i < 1; i++){
 			assertEquals("Hello world",helloWorldPage.getMessage());
 		}
 	}
