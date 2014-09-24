@@ -50,6 +50,4 @@ public class HelloWorldController extends ParameterizableViewController {
 	public void setMessageFactory(MessageFactory messageFactory) {
 		this.messageFactory = messageFactory;
 	}
-
-	
 }

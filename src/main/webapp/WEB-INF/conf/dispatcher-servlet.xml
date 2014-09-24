@@ -19,6 +19,7 @@
 			<value>
 			    /index.html=homePageController
 				/helloWorld.html=helloWorldController
+				/data=serviceController
 			</value>
 		</property>
 	</bean>
@@ -29,6 +30,9 @@
 	
 	<bean id="helloWorldController" class="com.example.HelloWorldController">
 		<property name="viewName" value="helloWorld.jsp"/>
+	</bean>
+
+	<bean id="serviceController" class="com.example.ServiceController">
 	</bean>
 
 

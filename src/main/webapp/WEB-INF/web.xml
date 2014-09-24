@@ -27,6 +27,7 @@
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>*.html</url-pattern>
+		<url-pattern>/data</url-pattern>
 	</servlet-mapping>
 
   
