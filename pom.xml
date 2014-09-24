@@ -164,7 +164,7 @@
 					        <goal>exec</goal>
 					      </goals>
 					      <configuration>
-					        <executable>/Users/pcampbell/Documents/Development/Automation/jmeterTest.sh</executable>
+					        <executable>/Users/pcampbell/.jenkins/jobs/sample-job/workspace/jmeterTest.sh</executable>
 					      </configuration>
 					    </execution>
 					  </executions>
