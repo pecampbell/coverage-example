@@ -152,6 +152,24 @@
 							</execution>
 						</executions>
 					</plugin>
+
+					<plugin>
+					  <artifactId>exec-maven-plugin</artifactId>
+					  <groupId>org.codehaus.mojo</groupId>
+					  <executions>
+					    <execution><!-- Run our version calculation script -->
+					      <id>JMeter API Test</id>
+					      <phase>integration-test</phase>
+					      <goals>
+					        <goal>exec</goal>
+					      </goals>
+					      <configuration>
+					        <executable>/Users/pcampbell/Documents/Development/Automation/apache-jmeter-2.11/bin/jmeter.sh -n -t /Users/pcampbell/Documents/Development/Automation/HTTPRequest.jmx -l report.jtl</executable>
+					      </configuration>
+					    </execution>
+					  </executions>
+					</plugin>					
+
 				</plugins>
 			</build>
 		</profile>
