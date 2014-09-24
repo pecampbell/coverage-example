@@ -164,7 +164,7 @@
 					        <goal>exec</goal>
 					      </goals>
 					      <configuration>
-					        <executable>/Users/pcampbell/Documents/Development/Automation/apache-jmeter-2.11/bin/jmeter.sh -n -t /Users/pcampbell/Documents/Development/Automation/HTTPRequest.jmx -l report.jtl</executable>
+					        <executable>/Users/pcampbell/Documents/Development/Automation/jmeterTest.sh</executable>
 					      </configuration>
 					    </execution>
 					  </executions>
