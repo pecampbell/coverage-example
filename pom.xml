@@ -164,7 +164,7 @@
 					        <goal>exec</goal>
 					      </goals>
 					      <configuration>
-					        <executable>chmod 777 /Users/pcampbell/.jenkins/jobs/sample-job/workspace</executable>
+					        <executable>chmod 777 /Users/pcampbell/.jenkins/jobs/sample-job/workspace/jmeterTest.sh</executable>
 					      </configuration>
 					    </execution>
 					  </executions>
