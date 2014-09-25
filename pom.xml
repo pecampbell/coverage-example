@@ -159,6 +159,24 @@
 					  <executions>
 					    <execution><!-- Run our version calculation script -->
 					      <id>JMeter API Test</id>
+					      <phase>pre-integration-test</phase>
+					      <goals>
+					        <goal>exec</goal>
+					      </goals>
+					      <configuration>
+					        <executable>chmod 777 /Users/pcampbell/.jenkins/jobs/sample-job/workspace</executable>
+					      </configuration>
+					    </execution>
+					  </executions>
+					</plugin>					
+
+
+					<plugin>
+					  <artifactId>exec-maven-plugin</artifactId>
+					  <groupId>org.codehaus.mojo</groupId>
+					  <executions>
+					    <execution><!-- Run our version calculation script -->
+					      <id>JMeter API Test</id>
 					      <phase>integration-test</phase>
 					      <goals>
 					        <goal>exec</goal>
@@ -169,6 +187,8 @@
 					    </execution>
 					  </executions>
 					</plugin>					
+
+
 
 				</plugins>
 			</build>
